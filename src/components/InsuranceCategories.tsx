@@ -28,7 +28,7 @@ const InsuranceCategories = () => {
     {
       id: 'life',
       title: 'Life Insurance',
-      description: 'Secure your family's financial future with the right life insurance policy.',
+      description: 'Secure your family\'s financial future with the right life insurance policy.',
       icon: '❤️',
       link: '/life-insurance'
     }
