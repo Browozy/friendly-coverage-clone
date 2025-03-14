@@ -34,7 +34,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Information */}
           <div>
-            <h3 className="text-xl font-bold mb-4">WiseInsure</h3>
+            <h3 className="text-xl font-bold mb-4">
+              <span className="text-insurance-secondary">Wise</span>
+              <span className="text-red-500">Insure</span>
+            </h3>
             <p className="text-gray-400 mb-4">Your trusted insurance broker, helping Canadians find the best coverage at competitive rates since 2008.</p>
             <div className="space-y-2">
               <div className="flex items-start">
@@ -117,7 +120,9 @@ const Footer = () => {
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row md:justify-between items-center">
             <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} WiseInsure. All rights reserved.
+              &copy; {new Date().getFullYear()} 
+              <span className="text-insurance-secondary"> Wise</span>
+              <span className="text-red-500">Insure</span>. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 flex space-x-6">
               <a href="#" className="text-gray-400 hover:text-white">
