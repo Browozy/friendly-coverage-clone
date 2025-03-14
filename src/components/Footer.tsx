@@ -1,15 +1,40 @@
 
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail, Shield, Award, Star } from 'lucide-react';
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
+        {/* Trust Badges Section */}
+        <div className="flex flex-wrap justify-center items-center gap-8 mb-12 border-b border-gray-700 pb-8">
+          <div className="flex items-center">
+            <Shield className="w-10 h-10 text-insurance-secondary mr-3" />
+            <div>
+              <h4 className="font-semibold">Licensed Broker</h4>
+              <p className="text-sm text-gray-400">FSRA #12345</p>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <Award className="w-10 h-10 text-insurance-secondary mr-3" />
+            <div>
+              <h4 className="font-semibold">Top Rated</h4>
+              <p className="text-sm text-gray-400">Insurance Excellence</p>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <Star className="w-10 h-10 text-insurance-secondary mr-3" />
+            <div>
+              <h4 className="font-semibold">5-Star Service</h4>
+              <p className="text-sm text-gray-400">Customer Satisfaction</p>
+            </div>
+          </div>
+        </div>
+      
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Information */}
           <div>
-            <h3 className="text-xl font-bold mb-4">InsureWise</h3>
+            <h3 className="text-xl font-bold mb-4">WiseInsure</h3>
             <p className="text-gray-400 mb-4">Your trusted insurance broker, helping Canadians find the best coverage at competitive rates since 2008.</p>
             <div className="space-y-2">
               <div className="flex items-start">
@@ -22,7 +47,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <Mail className="w-5 h-5 mr-2 text-insurance-secondary" />
-                <p className="text-gray-400">info@insurewise.ca</p>
+                <p className="text-gray-400">info@wiseinsure.ca</p>
               </div>
             </div>
           </div>
@@ -30,14 +55,34 @@ const Footer = () => {
           {/* Insurance Products */}
           <div>
             <h3 className="text-xl font-bold mb-4">Insurance Products</h3>
-            <ul className="space-y-2">
-              <li><Link to="/auto-insurance" className="text-gray-400 hover:text-white">Auto Insurance</Link></li>
-              <li><Link to="/home-insurance" className="text-gray-400 hover:text-white">Home Insurance</Link></li>
-              <li><Link to="/condo-insurance" className="text-gray-400 hover:text-white">Condo Insurance</Link></li>
-              <li><Link to="/tenant-insurance" className="text-gray-400 hover:text-white">Tenant Insurance</Link></li>
-              <li><Link to="/business-insurance" className="text-gray-400 hover:text-white">Business Insurance</Link></li>
-              <li><Link to="/life-insurance" className="text-gray-400 hover:text-white">Life Insurance</Link></li>
-            </ul>
+            <div className="grid grid-cols-2 gap-2">
+              <div>
+                <h4 className="text-white text-sm font-semibold mb-2">Auto</h4>
+                <ul className="space-y-2">
+                  <li><Link to="/auto-insurance" className="text-gray-400 hover:text-white text-sm">Car Insurance</Link></li>
+                  <li><Link to="/motorcycle-insurance" className="text-gray-400 hover:text-white text-sm">Motorcycle</Link></li>
+                  <li><Link to="/classic-car-insurance" className="text-gray-400 hover:text-white text-sm">Classic Car</Link></li>
+                  <li><Link to="/high-risk-insurance" className="text-gray-400 hover:text-white text-sm">High Risk</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-white text-sm font-semibold mb-2">Home</h4>
+                <ul className="space-y-2">
+                  <li><Link to="/home-insurance" className="text-gray-400 hover:text-white text-sm">Homeowners</Link></li>
+                  <li><Link to="/condo-insurance" className="text-gray-400 hover:text-white text-sm">Condo</Link></li>
+                  <li><Link to="/tenant-insurance" className="text-gray-400 hover:text-white text-sm">Tenant</Link></li>
+                  <li><Link to="/landlord-insurance" className="text-gray-400 hover:text-white text-sm">Landlord</Link></li>
+                </ul>
+              </div>
+            </div>
+            <div className="mt-4">
+              <ul className="space-y-2">
+                <li><Link to="/business-insurance" className="text-gray-400 hover:text-white text-sm">Business Insurance</Link></li>
+                <li><Link to="/life-insurance" className="text-gray-400 hover:text-white text-sm">Life Insurance</Link></li>
+                <li><Link to="/travel-insurance" className="text-gray-400 hover:text-white text-sm">Travel Insurance</Link></li>
+                <li><Link to="/health-insurance" className="text-gray-400 hover:text-white text-sm">Health Insurance</Link></li>
+              </ul>
+            </div>
           </div>
           
           {/* Company Links */}
@@ -47,19 +92,24 @@ const Footer = () => {
               <li><Link to="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
               <li><Link to="/careers" className="text-gray-400 hover:text-white">Careers</Link></li>
               <li><Link to="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>
+              <li><Link to="/news" className="text-gray-400 hover:text-white">News</Link></li>
+              <li><Link to="/reviews" className="text-gray-400 hover:text-white">Reviews</Link></li>
               <li><Link to="/faq" className="text-gray-400 hover:text-white">FAQ</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-white">Contact Us</Link></li>
             </ul>
           </div>
           
-          {/* Customer Service */}
+          {/* Resources */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Customer Service</h3>
+            <h3 className="text-xl font-bold mb-4">Resources</h3>
             <ul className="space-y-2">
               <li><Link to="/claims" className="text-gray-400 hover:text-white">Claims</Link></li>
               <li><Link to="/payment" className="text-gray-400 hover:text-white">Payment Options</Link></li>
+              <li><Link to="/insurance-guides" className="text-gray-400 hover:text-white">Insurance Guides</Link></li>
+              <li><Link to="/insurance-calculator" className="text-gray-400 hover:text-white">Insurance Calculator</Link></li>
               <li><Link to="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</Link></li>
               <li><Link to="/terms" className="text-gray-400 hover:text-white">Terms of Service</Link></li>
+              <li><Link to="/accessibility" className="text-gray-400 hover:text-white">Accessibility</Link></li>
             </ul>
           </div>
         </div>
@@ -67,7 +117,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row md:justify-between items-center">
             <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} InsureWise. All rights reserved.
+              &copy; {new Date().getFullYear()} WiseInsure. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 flex space-x-6">
               <a href="#" className="text-gray-400 hover:text-white">

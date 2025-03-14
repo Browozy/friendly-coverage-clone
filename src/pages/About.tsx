@@ -15,7 +15,7 @@ const About = () => {
         {/* Hero Section */}
         <section className="bg-insurance-primary py-16">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">About InsureWise</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">About WiseInsure</h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
               We're dedicated to helping Canadians find the perfect insurance coverage at competitive rates.
             </p>
@@ -29,7 +29,7 @@ const About = () => {
               <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">Our Story</h2>
               <div className="space-y-4 text-lg text-gray-600">
                 <p>
-                  Founded in 2010, InsureWise began with a simple mission: to make insurance shopping easier, more transparent, and more affordable for all Canadians.
+                  Founded in 2010, WiseInsure began with a simple mission: to make insurance shopping easier, more transparent, and more affordable for all Canadians.
                 </p>
                 <p>
                   Our founders recognized that finding the right insurance policy was often confusing, time-consuming, and frustrating. Many Canadians were either overpaying for coverage they didn't need or were underinsured without knowing it.
@@ -38,7 +38,7 @@ const About = () => {
                   We set out to change that by building a platform that connects customers with the right insurance providers for their specific needs. By leveraging technology and insurance expertise, we've helped thousands of Canadians save money while getting the protection they need.
                 </p>
                 <p>
-                  Today, InsureWise is one of Canada's leading insurance comparison services, with a dedicated team of licensed insurance advisors and partnerships with over 30 of the country's top insurance providers.
+                  Today, WiseInsure is one of Canada's leading insurance comparison services, with a dedicated team of licensed insurance advisors and partnerships with over 30 of the country's top insurance providers.
                 </p>
               </div>
             </div>
@@ -93,7 +93,7 @@ const About = () => {
         {/* Why Choose Us */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Why Choose InsureWise</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Why Choose WiseInsure</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
@@ -136,7 +136,7 @@ const About = () => {
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-gray-800">Save Time and Money</h3>
                     <p className="text-gray-600">
-                      Our customers save an average of 30% on their insurance premiums when they shop with InsureWise.
+                      Our customers save an average of 30% on their insurance premiums when they shop with WiseInsure.
                     </p>
                   </div>
                 </div>

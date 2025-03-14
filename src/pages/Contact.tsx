@@ -66,9 +66,9 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-gray-800">Email</h3>
                       <p className="text-gray-600">
-                        General Inquiries: info@insurewise.ca<br />
-                        Customer Support: support@insurewise.ca<br />
-                        Claims: claims@insurewise.ca
+                        General Inquiries: info@wiseinsure.ca<br />
+                        Customer Support: support@wiseinsure.ca<br />
+                        Claims: claims@wiseinsure.ca
                       </p>
                     </div>
                   </div>
