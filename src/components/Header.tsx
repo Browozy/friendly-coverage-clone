@@ -8,6 +8,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAutoMenuOpen, setIsAutoMenuOpen] = useState(false);
   const [isHomeMenuOpen, setIsHomeMenuOpen] = useState(false);
+  const [isInsurersMenuOpen, setIsInsurersMenuOpen] = useState(false);
+  const [isResourcesMenuOpen, setIsResourcesMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -96,6 +98,55 @@ const Header = () => {
               )}
             </div>
 
+            {/* Our Insurers Dropdown - NEW */}
+            <div className="relative group">
+              <button 
+                className="flex items-center text-gray-700 hover:text-insurance-primary font-medium"
+                onClick={() => setIsInsurersMenuOpen(!isInsurersMenuOpen)}
+                onMouseEnter={() => setIsInsurersMenuOpen(true)}
+                onMouseLeave={() => setIsInsurersMenuOpen(false)}
+              >
+                Our Insurers
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              {isInsurersMenuOpen && (
+                <div 
+                  className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg py-2 z-50"
+                  onMouseEnter={() => setIsInsurersMenuOpen(true)}
+                  onMouseLeave={() => setIsInsurersMenuOpen(false)}
+                >
+                  <Link to="/insurers" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">All Insurance Providers</Link>
+                  <Link to="/insurance-quotes" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Compare Quotes</Link>
+                  <Link to="/insurance-partnerships" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Our Partnerships</Link>
+                </div>
+              )}
+            </div>
+
+            {/* Resources Dropdown - NEW */}
+            <div className="relative group">
+              <button 
+                className="flex items-center text-gray-700 hover:text-insurance-primary font-medium"
+                onClick={() => setIsResourcesMenuOpen(!isResourcesMenuOpen)}
+                onMouseEnter={() => setIsResourcesMenuOpen(true)}
+                onMouseLeave={() => setIsResourcesMenuOpen(false)}
+              >
+                Resources
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              {isResourcesMenuOpen && (
+                <div 
+                  className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg py-2 z-50"
+                  onMouseEnter={() => setIsResourcesMenuOpen(true)}
+                  onMouseLeave={() => setIsResourcesMenuOpen(false)}
+                >
+                  <Link to="/blog" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Blog</Link>
+                  <Link to="/insurance-guides" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Insurance Guides</Link>
+                  <Link to="/faq" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">FAQs</Link>
+                  <Link to="/insurance-calculator" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Insurance Calculator</Link>
+                </div>
+              )}
+            </div>
+
             <Link to="/business-insurance" className="text-gray-700 hover:text-insurance-primary font-medium">Business Insurance</Link>
             <Link to="/life-insurance" className="text-gray-700 hover:text-insurance-primary font-medium">Life Insurance</Link>
             <Link to="/about" className="text-gray-700 hover:text-insurance-primary font-medium">About Us</Link>
@@ -134,6 +185,23 @@ const Header = () => {
               <Link to="/condo-insurance" className="block pl-4 py-1 text-sm text-gray-700 hover:text-insurance-primary" onClick={toggleMenu}>Condo Insurance</Link>
               <Link to="/tenant-insurance" className="block pl-4 py-1 text-sm text-gray-700 hover:text-insurance-primary" onClick={toggleMenu}>Tenant Insurance</Link>
               <Link to="/landlord-insurance" className="block pl-4 py-1 text-sm text-gray-700 hover:text-insurance-primary" onClick={toggleMenu}>Landlord Insurance</Link>
+            </div>
+            
+            {/* Our Insurers - NEW Mobile Section */}
+            <div className="border-b pb-2">
+              <p className="font-medium text-gray-800 mb-2">Our Insurers</p>
+              <Link to="/insurers" className="block pl-4 py-1 text-sm text-gray-700 hover:text-insurance-primary" onClick={toggleMenu}>All Insurance Providers</Link>
+              <Link to="/insurance-quotes" className="block pl-4 py-1 text-sm text-gray-700 hover:text-insurance-primary" onClick={toggleMenu}>Compare Quotes</Link>
+              <Link to="/insurance-partnerships" className="block pl-4 py-1 text-sm text-gray-700 hover:text-insurance-primary" onClick={toggleMenu}>Our Partnerships</Link>
+            </div>
+            
+            {/* Resources - NEW Mobile Section */}
+            <div className="border-b pb-2">
+              <p className="font-medium text-gray-800 mb-2">Resources</p>
+              <Link to="/blog" className="block pl-4 py-1 text-sm text-gray-700 hover:text-insurance-primary" onClick={toggleMenu}>Blog</Link>
+              <Link to="/insurance-guides" className="block pl-4 py-1 text-sm text-gray-700 hover:text-insurance-primary" onClick={toggleMenu}>Insurance Guides</Link>
+              <Link to="/faq" className="block pl-4 py-1 text-sm text-gray-700 hover:text-insurance-primary" onClick={toggleMenu}>FAQs</Link>
+              <Link to="/insurance-calculator" className="block pl-4 py-1 text-sm text-gray-700 hover:text-insurance-primary" onClick={toggleMenu}>Insurance Calculator</Link>
             </div>
             
             <Link to="/business-insurance" className="block text-gray-700 hover:text-insurance-primary font-medium" onClick={toggleMenu}>Business Insurance</Link>
