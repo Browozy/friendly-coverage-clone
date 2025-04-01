@@ -17,6 +17,7 @@ import Insurers from "./pages/Insurers";
 import Blog from "./pages/Blog";
 import Faq from "./pages/Faq";
 import NotFound from "./pages/NotFound";
+import StaticExport from "./pages/StaticExport";
 
 const queryClient = new QueryClient();
 
@@ -35,10 +36,11 @@ const App = () => (
           <Route path="/life-insurance" element={<LifeInsurance />} />
           <Route path="/about" element={<About />} />
           
-          {/* New implemented routes */}
+          {/* Implemented routes */}
           <Route path="/insurers" element={<Insurers />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/faq" element={<Faq />} />
+          <Route path="/static-export" element={<StaticExport />} />
           
           {/* Routes that will redirect to NotFound until implemented */}
           <Route path="/motorcycle-insurance" element={<NotFound />} />
