@@ -39,7 +39,7 @@ const DownloadStatic = () => {
       toast({
         title: "Download initiated!",
         description: "Your static site is being downloaded.",
-        variant: "success",
+        variant: "default", // Changed from "success" to "default"
       });
     } catch (error) {
       console.error('Download failed:', error);
