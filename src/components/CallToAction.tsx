@@ -27,7 +27,7 @@ const CallToAction = () => {
           <Button asChild variant="ghost" className="border border-white text-white hover:bg-white hover:text-insurance-primary">
             <Link to="/static-export">
               <Download className="mr-2 h-4 w-4" />
-              Download Files
+              Download Project Files
             </Link>
           </Button>
         </div>

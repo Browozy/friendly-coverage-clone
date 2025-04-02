@@ -15,30 +15,28 @@ const DownloadStatic = ({ isFullProject = false }) => {
         description: "Please wait while we prepare your download...",
       });
       
-      // In a real implementation, this would trigger a server-side build process
-      // For demo purposes, we'll just simulate a delay and download a pre-built zip
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Simulate processing time for better UX
+      await new Promise(resolve => setTimeout(resolve, 1500));
       
-      // Create a link element
+      // Create a link element to trigger the download
       const link = document.createElement('a');
       
-      // In a real implementation, this would be dynamically generated
-      // For demonstration, we'll just point to a static file
+      // Set the download source based on the requested file type
       link.href = isFullProject ? '/wiseinsure-project.zip' : '/static-site.zip';
       link.download = isFullProject ? 'wiseinsure-project.zip' : 'wiseinsure-static.zip';
       
-      // Append to the document body
+      // Append to the document body and trigger the download
       document.body.appendChild(link);
-      
-      // Programmatically click the link
       link.click();
       
       // Clean up
       document.body.removeChild(link);
       
       toast({
-        title: isFullProject ? "Project download initiated!" : "Download initiated!",
-        description: isFullProject ? "Your complete project is being downloaded." : "Your static site is being downloaded.",
+        title: isFullProject ? "Project download initiated!" : "Static site download initiated!",
+        description: isFullProject 
+          ? "Your complete project is being downloaded." 
+          : "Your static site is being downloaded.",
         variant: "default",
       });
     } catch (error) {
