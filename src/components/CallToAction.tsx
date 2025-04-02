@@ -23,11 +23,11 @@ const CallToAction = () => {
           </Button>
         </div>
         
-        <div className="mt-8">
+        <div className="mt-8 flex justify-center gap-4">
           <Button asChild variant="ghost" className="border border-white text-white hover:bg-white hover:text-insurance-primary">
             <Link to="/static-export">
               <Download className="mr-2 h-4 w-4" />
-              Download Static Site
+              Download Files
             </Link>
           </Button>
         </div>

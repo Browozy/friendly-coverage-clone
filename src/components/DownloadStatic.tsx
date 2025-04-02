@@ -4,14 +4,14 @@ import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 
-const DownloadStatic = () => {
+const DownloadStatic = ({ isFullProject = false }) => {
   const [isGenerating, setIsGenerating] = useState(false);
 
   const handleDownload = async () => {
     try {
       setIsGenerating(true);
       toast({
-        title: "Generating static files",
+        title: isFullProject ? "Packaging project files" : "Generating static files",
         description: "Please wait while we prepare your download...",
       });
       
@@ -24,8 +24,8 @@ const DownloadStatic = () => {
       
       // In a real implementation, this would be dynamically generated
       // For demonstration, we'll just point to a static file
-      link.href = '/static-site.zip';
-      link.download = 'wiseinsure-static.zip';
+      link.href = isFullProject ? '/wiseinsure-project.zip' : '/static-site.zip';
+      link.download = isFullProject ? 'wiseinsure-project.zip' : 'wiseinsure-static.zip';
       
       // Append to the document body
       document.body.appendChild(link);
@@ -37,15 +37,15 @@ const DownloadStatic = () => {
       document.body.removeChild(link);
       
       toast({
-        title: "Download initiated!",
-        description: "Your static site is being downloaded.",
-        variant: "default", // Changed from "success" to "default"
+        title: isFullProject ? "Project download initiated!" : "Download initiated!",
+        description: isFullProject ? "Your complete project is being downloaded." : "Your static site is being downloaded.",
+        variant: "default",
       });
     } catch (error) {
       console.error('Download failed:', error);
       toast({
         title: "Download failed",
-        description: "There was an error generating your static site.",
+        description: "There was an error generating your download.",
         variant: "destructive",
       });
     } finally {
@@ -60,7 +60,10 @@ const DownloadStatic = () => {
       disabled={isGenerating}
     >
       <Download className="mr-2 h-4 w-4" />
-      {isGenerating ? 'Generating...' : 'Download Static Site'}
+      {isGenerating 
+        ? (isFullProject ? 'Packaging...' : 'Generating...') 
+        : (isFullProject ? 'Download Complete Project' : 'Download Static Site')
+      }
     </Button>
   );
 };
